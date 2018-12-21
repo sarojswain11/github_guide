@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="">
+    <ion-title>All Birthdays</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let info of infoArray; let i=index">
+    <ion-item>
+       <ion-avatar item-start>
+         <img [src]="info.icon" alt="avatar text">
+       </ion-avatar>   
+       <h2>{{info.name}}</h2>       
+       <p>{{info.relation}}</p>       
+       <button ion-button item-end clear (click)="onSendWishes(i)">Send Wishes</button>      
+    </ion-item>
+    <button 
+        ion-button
+        clear
+        (click)="viewModal(i)"
+        >View More</button>
+        
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button
+          ion-fab
+          [navPush]="newBdayPage"
+          >
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

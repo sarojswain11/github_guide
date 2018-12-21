@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- <ion-item>
+    <p>Test Modal</p>
+    <button ion-button [navPush]="birthdayPage" >Back</button>
+  </ion-item> -->
+
+  <ion-card>
+    <img [src]="icon" alt="">
+    <!-- <h1 text-center>{{ name }}</h1> -->
+    <br><br>
+    <h2>More details:</h2><br>
+    <p>Name: {{ name }}</p>
+    <p>Relation: {{ relation }}</p>
+    <p>Date of Birth: {{ dob }}</p>
+    <p>Contact: {{ contact }}</p>
+    <br>
+    <p>Make {{name}} birthday special by sending Good Wishes.</p>
+    <br><br>  
+    <button type="button" ion-button full (click)="onClickSendWishes()">Back</button>
+  </ion-card>
+</ion-content>
